@@ -1,0 +1,10 @@
+% layout 'default';
+% title 'Welcome';
+<h2><%= $title%></h2>
+<p1><%= $content%></p1>
+
+% my $block = begin 
+  % my $name = shift;
+    <h><%= $name%></h>
+% end
+
