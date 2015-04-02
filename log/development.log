@@ -1066,3 +1066,414 @@
 [Wed Apr  1 20:17:49 2015] [debug] GET "/restrict".
 [Wed Apr  1 20:17:49 2015] [debug] Routing to controller "LSWG::Controller::Admin" and action "is_logged_in".
 [Wed Apr  1 20:17:49 2015] [debug] 200 OK (0.000587s, 1703.578/s).
+[Thu Apr  2 00:11:09 2015] [info] Listening at "http://*:3000".
+[Thu Apr  2 00:11:13 2015] [debug] GET "/".
+[Thu Apr  2 00:11:13 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:11:13 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:11:13 2015] [error] Global symbol "$content" requires explicit package name at template index/welcome.html.ep line 4.
+1: % layout 'default';
+2: % title 'Welcome';
+3: <h2><%= $title%></h2>
+4: <p1><%= $content%></p1>
+5: 
+6: % my $block = begin 
+7:   % my $name = shift;
+8:     <h><%= $name%></h>
+9: % end
+
+[Thu Apr  2 00:11:13 2015] [debug] Template "exception.development.html.ep" not found.
+[Thu Apr  2 00:11:13 2015] [debug] Template "exception.html.ep" not found.
+[Thu Apr  2 00:11:13 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Apr  2 00:11:13 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Apr  2 00:11:13 2015] [debug] 500 Internal Server Error (0.025582s, 39.090/s).
+[Thu Apr  2 00:13:35 2015] [debug] GET "/".
+[Thu Apr  2 00:13:35 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:13:35 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:13:35 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:13:35 2015] [debug] 200 OK (0.003522s, 283.930/s).
+[Thu Apr  2 00:13:52 2015] [debug] GET "/".
+[Thu Apr  2 00:13:52 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:13:52 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:13:52 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:13:52 2015] [debug] 200 OK (0.003731s, 268.025/s).
+[Thu Apr  2 00:13:52 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:13:52 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:15:12 2015] [debug] GET "/restrict".
+[Thu Apr  2 00:15:12 2015] [debug] Routing to controller "LSWG::Controller::Admin" and action "is_logged_in".
+[Thu Apr  2 00:15:12 2015] [debug] 200 OK (0.001582s, 632.111/s).
+[Thu Apr  2 00:16:52 2015] [debug] GET "/".
+[Thu Apr  2 00:16:52 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:16:52 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:16:52 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:16:52 2015] [debug] 200 OK (0.001008s, 992.063/s).
+[Thu Apr  2 00:16:52 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:16:52 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:17:33 2015] [debug] GET "/".
+[Thu Apr  2 00:17:33 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:17:33 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:17:33 2015] [error] Global symbol "$title1" requires explicit package name at template index/welcome.html.ep line 5.
+Global symbol "$content1" requires explicit package name at template index/welcome.html.ep line 6.
+1: % layout 'default';
+2: % title 'Welcome';
+3: <h2><%= $title%></h2>
+4: <p1><%= $content%></p1>
+5: <h2><%= $title1%></h2>
+6: <p1><%= $content1%></p1>
+7: 
+8: % my $block = begin 
+9:   % my $name = shift;
+10:     <h><%= $name%></h>
+
+[Thu Apr  2 00:17:33 2015] [debug] Template "exception.development.html.ep" not found.
+[Thu Apr  2 00:17:33 2015] [debug] Template "exception.html.ep" not found.
+[Thu Apr  2 00:17:33 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Apr  2 00:17:33 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Apr  2 00:17:33 2015] [debug] 500 Internal Server Error (0.029217s, 34.227/s).
+[Thu Apr  2 00:18:31 2015] [debug] GET "/".
+[Thu Apr  2 00:18:31 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:18:31 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:18:31 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:18:31 2015] [debug] 200 OK (0.011542s, 86.640/s).
+[Thu Apr  2 00:18:31 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:18:31 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:19:06 2015] [debug] GET "/".
+[Thu Apr  2 00:19:06 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:19:06 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:19:06 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:19:06 2015] [debug] 200 OK (0.002953s, 338.639/s).
+[Thu Apr  2 00:19:06 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:19:06 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:19:24 2015] [debug] GET "/".
+[Thu Apr  2 00:19:24 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:19:24 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:19:24 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:19:24 2015] [debug] 200 OK (0.003353s, 298.240/s).
+[Thu Apr  2 00:19:45 2015] [debug] GET "/".
+[Thu Apr  2 00:19:45 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:19:45 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:19:45 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:19:45 2015] [debug] 200 OK (0.004123s, 242.542/s).
+[Thu Apr  2 00:19:46 2015] [debug] GET "/".
+[Thu Apr  2 00:19:46 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:19:46 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:19:46 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:19:46 2015] [debug] 200 OK (0.000779s, 1283.697/s).
+[Thu Apr  2 00:21:33 2015] [debug] GET "/".
+[Thu Apr  2 00:21:33 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:21:33 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:21:33 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:21:33 2015] [debug] 200 OK (0.005864s, 170.532/s).
+[Thu Apr  2 00:21:35 2015] [debug] GET "/".
+[Thu Apr  2 00:21:35 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:21:35 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:21:35 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:21:35 2015] [debug] 200 OK (0.000741s, 1349.528/s).
+[Thu Apr  2 00:21:36 2015] [debug] GET "/".
+[Thu Apr  2 00:21:36 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:21:36 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:21:36 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:21:36 2015] [debug] 200 OK (0.000729s, 1371.742/s).
+[Thu Apr  2 00:21:53 2015] [debug] GET "/".
+[Thu Apr  2 00:21:53 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:21:53 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:21:53 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:21:53 2015] [debug] 200 OK (0.004992s, 200.321/s).
+[Thu Apr  2 00:22:45 2015] [debug] GET "/".
+[Thu Apr  2 00:22:45 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:22:45 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:22:45 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:22:45 2015] [debug] 200 OK (0.003373s, 296.472/s).
+[Thu Apr  2 00:22:46 2015] [debug] GET "/".
+[Thu Apr  2 00:22:46 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:22:46 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:22:46 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:22:46 2015] [debug] 200 OK (0.000753s, 1328.021/s).
+[Thu Apr  2 00:22:52 2015] [debug] GET "/".
+[Thu Apr  2 00:22:52 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:22:52 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:22:52 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:22:52 2015] [debug] 200 OK (0.003724s, 268.528/s).
+[Thu Apr  2 00:22:52 2015] [debug] GET "/".
+[Thu Apr  2 00:22:52 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:22:52 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:22:52 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:22:52 2015] [debug] 200 OK (0.001042s, 959.693/s).
+[Thu Apr  2 00:22:58 2015] [debug] GET "/".
+[Thu Apr  2 00:22:58 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:22:58 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:22:58 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:22:58 2015] [debug] 200 OK (0.003869s, 258.465/s).
+[Thu Apr  2 00:22:59 2015] [debug] GET "/".
+[Thu Apr  2 00:22:59 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:22:59 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:22:59 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:22:59 2015] [debug] 200 OK (0.000818s, 1222.494/s).
+[Thu Apr  2 00:42:10 2015] [debug] GET "/".
+[Thu Apr  2 00:42:10 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:42:10 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:42:10 2015] [error] Bareword "post3" not allowed while "strict subs" in use at template index/welcome.html.ep line 3.
+1: % layout 'default';
+2: % title 'Welcome';
+3: % my $posts = [post1 post2 post3] ;
+4: 
+5: % for my $p (@$posts) {
+6:     <h2><%= $p %></h2>
+7: % }
+
+[Thu Apr  2 00:42:10 2015] [debug] Template "exception.development.html.ep" not found.
+[Thu Apr  2 00:42:10 2015] [debug] Template "exception.html.ep" not found.
+[Thu Apr  2 00:42:10 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Apr  2 00:42:10 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Apr  2 00:42:10 2015] [debug] 500 Internal Server Error (0.024535s, 40.758/s).
+[Thu Apr  2 00:42:54 2015] [debug] GET "/".
+[Thu Apr  2 00:42:54 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:42:54 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:42:54 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:42:55 2015] [debug] 200 OK (0.011764s, 85.005/s).
+[Thu Apr  2 00:45:02 2015] [debug] GET "/".
+[Thu Apr  2 00:45:02 2015] [error] Bareword "post1" not allowed while "strict subs" in use at lib/LSWG/Controller/Index.pm line 11.
+Bareword "post2" not allowed while "strict subs" in use at lib/LSWG/Controller/Index.pm line 11.
+Bareword "post3" not allowed while "strict subs" in use at lib/LSWG/Controller/Index.pm line 11.
+Compilation failed in require at (eval 272) line 1.
+
+[Thu Apr  2 00:45:02 2015] [debug] Template "exception.development.html.ep" not found.
+[Thu Apr  2 00:45:02 2015] [debug] Template "exception.html.ep" not found.
+[Thu Apr  2 00:45:02 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Apr  2 00:45:02 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Apr  2 00:45:02 2015] [debug] 500 Internal Server Error (0.022351s, 44.741/s).
+[Thu Apr  2 00:45:24 2015] [debug] GET "/".
+[Thu Apr  2 00:45:24 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:45:24 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:45:24 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:45:24 2015] [debug] 200 OK (0.004320s, 231.481/s).
+[Thu Apr  2 00:45:42 2015] [info] Listening at "http://*:3000".
+[Thu Apr  2 00:45:44 2015] [debug] GET "/".
+[Thu Apr  2 00:45:44 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:45:44 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:45:44 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:45:44 2015] [debug] 200 OK (0.005103s, 195.963/s).
+[Thu Apr  2 00:45:48 2015] [debug] GET "/".
+[Thu Apr  2 00:45:48 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:45:48 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:45:48 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:45:48 2015] [debug] 200 OK (0.001288s, 776.398/s).
+[Thu Apr  2 00:46:09 2015] [debug] GET "/".
+[Thu Apr  2 00:46:09 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:46:09 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:46:10 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:46:10 2015] [debug] 200 OK (0.005295s, 188.857/s).
+[Thu Apr  2 00:46:27 2015] [debug] GET "/".
+[Thu Apr  2 00:46:27 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:46:27 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:46:27 2015] [error] Global symbol "@ppp" requires explicit package name at template index/welcome.html.ep line 3.
+1: % layout 'default';
+2: % title 'Welcome';
+3: % my @posts = <%= @ppp %>
+4: 
+5: % for my $p (@posts) {
+6:     <h2><%= $p %></h2>
+7: % }
+
+[Thu Apr  2 00:46:27 2015] [debug] Template "exception.development.html.ep" not found.
+[Thu Apr  2 00:46:27 2015] [debug] Template "exception.html.ep" not found.
+[Thu Apr  2 00:46:27 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Apr  2 00:46:27 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Apr  2 00:46:27 2015] [debug] 500 Internal Server Error (0.025932s, 38.562/s).
+[Thu Apr  2 00:46:46 2015] [debug] GET "/".
+[Thu Apr  2 00:46:46 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:46:46 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:46:46 2015] [error] Global symbol "@ppp" requires explicit package name at template index/welcome.html.ep line 3.
+1: % layout 'default';
+2: % title 'Welcome';
+3: % my @posts = <%= @ppp %>
+4: 
+5: % for my $p (@posts) {
+6:     <h2><%= $p %></h2>
+7: % }
+
+[Thu Apr  2 00:46:46 2015] [debug] Template "exception.development.html.ep" not found.
+[Thu Apr  2 00:46:46 2015] [debug] Template "exception.html.ep" not found.
+[Thu Apr  2 00:46:46 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Apr  2 00:46:46 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Apr  2 00:46:46 2015] [debug] 500 Internal Server Error (0.031035s, 32.222/s).
+[Thu Apr  2 00:46:56 2015] [info] Listening at "http://*:3000".
+[Thu Apr  2 00:47:00 2015] [debug] GET "/".
+[Thu Apr  2 00:47:00 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:00 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:47:00 2015] [error] Global symbol "@ppp" requires explicit package name at template index/welcome.html.ep line 3.
+1: % layout 'default';
+2: % title 'Welcome';
+3: % my @posts = <%= @ppp %>
+4: 
+5: % for my $p (@posts) {
+6:     <h2><%= $p %></h2>
+7: % }
+
+[Thu Apr  2 00:47:00 2015] [debug] Template "exception.development.html.ep" not found.
+[Thu Apr  2 00:47:00 2015] [debug] Template "exception.html.ep" not found.
+[Thu Apr  2 00:47:00 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Apr  2 00:47:00 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Apr  2 00:47:00 2015] [debug] 500 Internal Server Error (0.024265s, 41.212/s).
+[Thu Apr  2 00:47:26 2015] [debug] GET "/".
+[Thu Apr  2 00:47:26 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:26 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:47:26 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:47:26 2015] [debug] 200 OK (0.003405s, 293.686/s).
+[Thu Apr  2 00:47:48 2015] [debug] GET "/".
+[Thu Apr  2 00:47:48 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:48 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:47:48 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:47:48 2015] [debug] 200 OK (0.004308s, 232.126/s).
+[Thu Apr  2 00:47:50 2015] [debug] GET "/".
+[Thu Apr  2 00:47:50 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:50 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:47:50 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:47:50 2015] [debug] 200 OK (0.000857s, 1166.861/s).
+[Thu Apr  2 00:47:51 2015] [debug] GET "/".
+[Thu Apr  2 00:47:51 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:51 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:47:51 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:47:51 2015] [debug] 200 OK (0.000918s, 1089.325/s).
+[Thu Apr  2 00:47:52 2015] [debug] GET "/".
+[Thu Apr  2 00:47:52 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:52 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:47:52 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:47:52 2015] [debug] 200 OK (0.000761s, 1314.060/s).
+[Thu Apr  2 00:47:52 2015] [debug] GET "/".
+[Thu Apr  2 00:47:52 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:52 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:47:52 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:47:52 2015] [debug] 200 OK (0.000811s, 1233.046/s).
+[Thu Apr  2 00:47:53 2015] [debug] GET "/".
+[Thu Apr  2 00:47:53 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:53 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:47:53 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:47:53 2015] [debug] 200 OK (0.000806s, 1240.695/s).
+[Thu Apr  2 00:47:53 2015] [debug] GET "/".
+[Thu Apr  2 00:47:53 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:53 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:47:53 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:47:53 2015] [debug] 200 OK (0.001165s, 858.369/s).
+[Thu Apr  2 00:47:53 2015] [debug] GET "/".
+[Thu Apr  2 00:47:53 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:53 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:47:53 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:47:53 2015] [debug] 200 OK (0.000742s, 1347.709/s).
+[Thu Apr  2 00:47:53 2015] [debug] GET "/".
+[Thu Apr  2 00:47:53 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:53 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:47:53 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:47:53 2015] [debug] 200 OK (0.000769s, 1300.390/s).
+[Thu Apr  2 00:47:54 2015] [debug] GET "/".
+[Thu Apr  2 00:47:54 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:54 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:47:54 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:47:54 2015] [debug] 200 OK (0.000735s, 1360.544/s).
+[Thu Apr  2 00:47:54 2015] [debug] GET "/".
+[Thu Apr  2 00:47:54 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:54 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:47:54 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:47:54 2015] [debug] 200 OK (0.001091s, 916.590/s).
+[Thu Apr  2 00:47:54 2015] [debug] GET "/".
+[Thu Apr  2 00:47:54 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:54 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:47:54 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:47:54 2015] [debug] 200 OK (0.000784s, 1275.510/s).
+[Thu Apr  2 00:47:54 2015] [debug] GET "/".
+[Thu Apr  2 00:47:54 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:54 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:47:54 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:47:54 2015] [debug] 200 OK (0.001634s, 611.995/s).
+[Thu Apr  2 00:47:55 2015] [debug] GET "/".
+[Thu Apr  2 00:47:55 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:55 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:47:55 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:47:55 2015] [debug] 200 OK (0.001070s, 934.579/s).
+[Thu Apr  2 00:47:55 2015] [debug] GET "/".
+[Thu Apr  2 00:47:55 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:47:55 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:47:55 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:47:55 2015] [debug] 200 OK (0.000683s, 1464.129/s).
+[Thu Apr  2 00:48:39 2015] [debug] GET "/".
+[Thu Apr  2 00:48:39 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:48:39 2015] [debug] Rendering cached template "index/welcome.html.ep".
+[Thu Apr  2 00:48:39 2015] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Apr  2 00:48:39 2015] [debug] 200 OK (0.001339s, 746.826/s).
+[Thu Apr  2 00:48:42 2015] [debug] GET "/".
+[Thu Apr  2 00:48:42 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:48:42 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:48:42 2015] [error] Global symbol "@ppp" requires explicit package name at template index/welcome.html.ep line 3.
+1: % layout 'default';
+2: % title 'Welcome';
+3: % my @posts = <%= @ppp %>
+4: 
+5: % for my $p (@posts) {
+6:     <h2><%= $p %></h2>
+7: % }
+
+[Thu Apr  2 00:48:42 2015] [debug] Template "exception.development.html.ep" not found.
+[Thu Apr  2 00:48:42 2015] [debug] Template "exception.html.ep" not found.
+[Thu Apr  2 00:48:42 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Apr  2 00:48:42 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Apr  2 00:48:42 2015] [debug] 500 Internal Server Error (0.035820s, 27.917/s).
+[Thu Apr  2 00:48:42 2015] [debug] GET "/".
+[Thu Apr  2 00:48:42 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:48:42 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:48:42 2015] [error] Global symbol "@ppp" requires explicit package name at template index/welcome.html.ep line 3.
+1: % layout 'default';
+2: % title 'Welcome';
+3: % my @posts = <%= @ppp %>
+4: 
+5: % for my $p (@posts) {
+6:     <h2><%= $p %></h2>
+7: % }
+
+[Thu Apr  2 00:48:42 2015] [debug] Template "exception.development.html.ep" not found.
+[Thu Apr  2 00:48:42 2015] [debug] Template "exception.html.ep" not found.
+[Thu Apr  2 00:48:42 2015] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Apr  2 00:48:42 2015] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Apr  2 00:48:42 2015] [debug] 500 Internal Server Error (0.013713s, 72.924/s).
+[Thu Apr  2 00:49:00 2015] [debug] GET "/".
+[Thu Apr  2 00:49:00 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:49:00 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:49:00 2015] [error] Can't modify array dereference in concatenation (.) or string at template index/welcome.html.ep line 3, at EOF
+1: % layout 'default';
+2: % title 'Welcome';
+3: % my @posts = @<%= $ppp %>
+4: 
+5: % for my $p (@posts) {
+6:     <h2><%= $p %></h2>
+7: % }
+
+[Thu Apr  2 00:49:00 2015] [debug] Template "exception.development.html.ep" not found.
+[Thu Apr  2 00:49:00 2015] [debug] Template "exception.html.ep" not found.
+[Thu Apr  2 00:49:00 2015] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Apr  2 00:49:00 2015] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Apr  2 00:49:00 2015] [debug] 500 Internal Server Error (0.026850s, 37.244/s).
+[Thu Apr  2 00:49:02 2015] [debug] GET "/".
+[Thu Apr  2 00:49:02 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:49:02 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:49:02 2015] [error] Can't modify array dereference in concatenation (.) or string at template index/welcome.html.ep line 3, at EOF
+1: % layout 'default';
+2: % title 'Welcome';
+3: % my @posts = @<%= $ppp %>
+4: 
+5: % for my $p (@posts) {
+6:     <h2><%= $p %></h2>
+7: % }
+
+[Thu Apr  2 00:49:02 2015] [debug] Template "exception.development.html.ep" not found.
+[Thu Apr  2 00:49:02 2015] [debug] Template "exception.html.ep" not found.
+[Thu Apr  2 00:49:02 2015] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Apr  2 00:49:02 2015] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Apr  2 00:49:02 2015] [debug] 500 Internal Server Error (0.012107s, 82.597/s).
+[Thu Apr  2 00:50:35 2015] [debug] GET "/".
+[Thu Apr  2 00:50:35 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:50:35 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:50:35 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:50:35 2015] [debug] 200 OK (0.014119s, 70.827/s).
+[Thu Apr  2 00:51:23 2015] [debug] GET "/".
+[Thu Apr  2 00:51:23 2015] [debug] Routing to controller "LSWG::Controller::Index" and action "welcome".
+[Thu Apr  2 00:51:23 2015] [debug] Rendering template "index/welcome.html.ep".
+[Thu Apr  2 00:51:23 2015] [debug] Rendering template "layouts/default.html.ep".
+[Thu Apr  2 00:51:23 2015] [debug] 200 OK (0.003642s, 274.574/s).
