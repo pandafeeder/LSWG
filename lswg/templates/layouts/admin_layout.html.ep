@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title><%= title %></title>
+  <style>
+	body { background-color : gray }
+	form { text-align : center }
+  </style>
+  </head>
+  <body><%= content %></body>
+</html>
