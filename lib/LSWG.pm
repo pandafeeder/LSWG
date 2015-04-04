@@ -1,9 +1,21 @@
 package LSWG;
 use Mojo::Base 'Mojolicious';
+use LSWG::Model::Schema;
+use DateTime;
 
 # This method will run once at server start
 sub startup {
   my $self = shift;
+
+  my $schema = LSWG::Model::Schema->connect('dbi:SQLite:database/my.db');
+  
+  if (-e 'database/my.db') {
+	  print "database exist\n";
+  } else {
+  	  $schema->deploy();
+  }
+
+  $self->helper(db => sub {return $schema});
 
   $self->secrets(['Mojolicious rock']);
   #$self->plugin('PODRenderer');

@@ -1,8 +1,12 @@
 % layout 'default';
 % title 'Welcome';
-% my @posts = qw(post1 post2 post3);
+% my $posts = db->resultset('Post');
 
-% for my $p (@posts) {
-    <h2><%= $p %></h2>
-    <p2>content</p2>
+% if (0 == $posts->count) {
+	<p>None: </p>
+% }
+
+% while (my $post = $posts->next) {
+	<h2><%= $post->title %></h2>
+	<p2><%= $post->content %></p2>
 % }
