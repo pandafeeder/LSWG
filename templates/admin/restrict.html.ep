@@ -1,2 +1,21 @@
+%#<script src="../jQuery/jquery-1.11.2.js"></script>
 % layout 'restrict_layout' ;
+% my $posts = db->resultset('Post');
+
 Welcome to the management page.
+
+% if (flash->{post_saved}) {
+    <p>Your post is saved</p>
+% }
+
+%#<input type="button" value="add Post" onclick="$.get('/');">
+
+% while (my $post = $posts->next) {
+    <h2><%= $post->title %></h2>
+    <p2><%= $post->content %></p2>
+    <p2><%= $post->author %></p2>
+    <p2><%= $post->date_published %></p2>
+% }
+
+</br>
+<a href="/add_post">add</a>

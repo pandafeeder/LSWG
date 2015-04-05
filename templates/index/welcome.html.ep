@@ -9,4 +9,6 @@
 % while (my $post = $posts->next) {
 	<h2><%= $post->title %></h2>
 	<p2><%= $post->content %></p2>
+	<p2><%= $post->author%></p2>
+	<p2><%= $post->date_published%></p2>
 % }

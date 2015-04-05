@@ -1,5 +1,6 @@
 package LSWG::Controller::Admin;
 use Mojo::Base 'Mojolicious::Controller';
+use DateTime;
 
 my %USER = (
     user => 'qusr',
@@ -32,6 +33,24 @@ sub is_logged_in {
 
 sub restrict {
   my $self = shift;
+}
+
+sub add_post {
+  my $self = shift;
+}
+
+sub create {
+  my $self = shift;
+  my $title = $self->param('title');
+  my $content = $self->param('content');
+  $self->db->resultset('Post')->create({
+		title => $title,
+		content => $content,
+		author => 'UserName',
+		date_published => DateTime->now->iso8601,
+  });
+  $self->flash(post_saved => 1);
+  $self->redirect_to('restrict');
 }
 
 sub logout {
