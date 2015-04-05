@@ -1,4 +1,3 @@
-%#<script src="../jQuery/jquery-1.11.2.js"></script>
 % layout 'restrict_layout' ;
 % my $posts = db->resultset('Post');
 
@@ -8,7 +7,9 @@ Welcome to the management page.
     <p>Your post is saved</p>
 % }
 
+</br>
 %#<input type="button" value="add Post" onclick="$.get('/');">
+%#<button type="button" onclick="$.get('/')">ClickMe</button> 
 
 % while (my $post = $posts->next) {
     <h2><%= $post->title %></h2>
@@ -19,3 +20,13 @@ Welcome to the management page.
 
 </br>
 <a href="/add_post">add</a>
+
+
+<p10>FUCK YOU</p10>
+%= javascript begin
+    $(document).ready(function(){
+	$("p10").click(function(){
+	    $(this).hide();
+	});
+    });
+% end

@@ -12,3 +12,12 @@
 	<p2><%= $post->author%></p2>
 	<p2><%= $post->date_published%></p2>
 % }
+
+<p10>FUCK YOU</p10>
+%= javascript begin
+    $(document).ready(function(){
+	$("p10").click(function(){
+	    $(this).hide();
+	});
+    });
+% end
