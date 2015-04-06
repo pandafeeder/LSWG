@@ -1,15 +1,25 @@
-% layout 'default';
-% title 'Welcome';
+% layout 'welcome';
+% title 'LSWG';
 % my $posts = db->resultset('Post');
 
+<header>
+Coal Alley
+</header>
+
+<div id = "content">
 % if (0 == $posts->count) {
 	<p>None: </p>
 % }
-
 % while (my $post = $posts->next) {
 	<a href="/posts/<%= $post->id %>"><h2><%= $post->title %></h2></a>
 	<p2><%= $post->content %></p2>
 	<p2><%= $post->author%></p2>
 	<p2><%= $post->date_published%></p2>
 % }
+</div>
 
+%#= javascript begin 
+%#    $(document).ready(function(){
+%#	alert("FUCK");
+%#    })
+%# end
