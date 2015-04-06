@@ -1,0 +1,10 @@
+% layout 'default';
+% title 'single';
+
+SINGLE
+
+% my $title = $pass->[0];
+% my $content = $pass->[1];
+
+<h2><%= $title %><h2>
+<p2><%= $content %></p2>

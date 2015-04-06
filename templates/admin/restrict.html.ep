@@ -8,25 +8,14 @@ Welcome to the management page.
 % }
 
 </br>
-%#<input type="button" value="add Post" onclick="$.get('/');">
-%#<button type="button" onclick="$.get('/')">ClickMe</button> 
+%#<input type="button" value="Delete" onclick="delete_post">
 
 % while (my $post = $posts->next) {
     <h2><%= $post->title %></h2>
-    <p2><%= $post->content %></p2>
-    <p2><%= $post->author %></p2>
     <p2><%= $post->date_published %></p2>
+    <a href="/delete/<%= $post->id %>">delete</a>
 % }
 
 </br>
+
 <a href="/add_post">add</a>
-
-
-<p10>FUCK YOU</p10>
-%= javascript begin
-    $(document).ready(function(){
-	$("p10").click(function(){
-	    $(this).hide();
-	});
-    });
-% end

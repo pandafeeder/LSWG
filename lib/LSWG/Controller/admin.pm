@@ -39,6 +39,13 @@ sub add_post {
   my $self = shift;
 }
 
+sub delete_post {
+  my $self = shift;
+  my $posts = $self->db->resultset('Post');
+  $posts->search({ id => $self->stash('id')})->delete;
+  $self->redirect_to('restrict');
+}
+
 sub create {
   my $self = shift;
   my $title = $self->param('title');

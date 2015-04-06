@@ -7,17 +7,9 @@
 % }
 
 % while (my $post = $posts->next) {
-	<h2><%= $post->title %></h2>
+	<a href="/posts/<%= $post->id %>"><h2><%= $post->title %></h2></a>
 	<p2><%= $post->content %></p2>
 	<p2><%= $post->author%></p2>
 	<p2><%= $post->date_published%></p2>
 % }
 
-<p10>FUCK YOU</p10>
-%= javascript begin
-    $(document).ready(function(){
-	$("p10").click(function(){
-	    $(this).hide();
-	});
-    });
-% end
