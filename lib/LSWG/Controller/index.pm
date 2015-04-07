@@ -1,4 +1,5 @@
 package LSWG::Controller::Index;
+use utf8;
 use Mojo::Base 'Mojolicious::Controller';
 
 # This action will render a template

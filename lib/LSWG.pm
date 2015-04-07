@@ -8,7 +8,7 @@ use utf8;
 sub startup {
   my $self = shift;
 
-  my $schema = LSWG::Model::Schema->connect('dbi:SQLite:database/my.db');
+  my $schema = LSWG::Model::Schema->connect('dbi:SQLite:database/my.db','', '', {sqlite_unicode => 1});
   
   if (-e 'database/my.db') {
 	  print "database exist\n";

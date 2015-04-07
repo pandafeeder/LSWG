@@ -1,6 +1,7 @@
 package LSWG::Controller::Admin;
 use Mojo::Base 'Mojolicious::Controller';
 use DateTime;
+use utf8;
 
 my %USER = (
     user => 'qusr',

@@ -1,5 +1,6 @@
 package LSWG::Model::Schema::Result::Post;
 use base qw/DBIx::Class::Core/;
+use utf8;
 
 __PACKAGE__->load_components(qw/InflateColumn::DateTime/);
 __PACKAGE__->table('posts');

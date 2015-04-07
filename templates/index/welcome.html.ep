@@ -3,7 +3,7 @@
 % my $posts = db->resultset('Post');
 
 <header>
-Coal Alley
+Coal Alley 
 </header>
 
 <div id = "content">
@@ -18,8 +18,8 @@ Coal Alley
 % }
 </div>
 
-%= javascript begin 
-    $(document).ready(function(){
-	alert("FUCK");
-    })
-% end
+%#= javascript begin 
+%#    $(document).ready(function(){
+%#	alert("FUCK");
+%#    })
+%# end

@@ -1,4 +1,5 @@
 package LSWG::Controller::Posts;
+use utf8;
 use Mojo::Base 'Mojolicious::Controller';
 
 sub single_page {
