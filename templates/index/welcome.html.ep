@@ -18,8 +18,8 @@ Coal Alley
 % }
 </div>
 
-%#= javascript begin 
-%#    $(document).ready(function(){
-%#	alert("FUCK");
-%#    })
-%# end
+%= javascript begin 
+    $(document).ready(function(){
+	alert("FUCK");
+    })
+% end

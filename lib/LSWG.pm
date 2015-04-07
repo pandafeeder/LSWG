@@ -2,6 +2,7 @@ package LSWG;
 use Mojo::Base 'Mojolicious';
 use LSWG::Model::Schema;
 use DateTime;
+use utf8;
 
 # This method will run once at server start
 sub startup {

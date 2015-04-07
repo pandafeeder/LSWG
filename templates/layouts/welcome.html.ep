@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> 
-  <!--<script src="jquery-1.11.2.min.js"></script>!-->
-  <!--%= stylesheet '//jQuery/jquery-1.11.2.min.js'!-->
+  <script src="js/jquery-1.11.2.min.js"></script>
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- STYLE !-->
   <style>
 	header {

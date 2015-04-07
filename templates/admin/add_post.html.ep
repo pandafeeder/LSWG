@@ -1,19 +1,9 @@
-% layout 'restrict_layout' ;
+% layout 'add_post' ;
 
 Welcome to the add_post page.
 
-%#<form method = "POST">
-%#    <input type = "text" name = "title" ></br>
-%#    <input type = "text" name = "content" ></br>
-%#    <input type = "submit" value="add Post">
-%#</form>
-
-<form>
-    <input name="title" type="text" placeholder="Title?" />
-    <textarea name="content" data-provide="markdown" rows="10"></textarea>
-    <label class="checkbox">
-      <input name="publish" type="checkbox"> Publish
-    </label>
-    <hr/>
-    <button type="submit" class="btn">Submit</button>
-  </form> 
+<form method = "POST">
+    <input type = "text" name = "title" ></br>
+    <input type = "text" name = "content" ></br>
+    <input type = "submit" value="add Post">
+</form>
