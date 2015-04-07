@@ -2,6 +2,21 @@
 
 Welcome to the add_post page.
 
+
+%#%= javascript begin
+%#    jQuery(document).ready(function($) {
+%#	$('#editor').markdownEditor({
+%#	    preview: true,
+%#            onPreview: function (content, callback) {
+%#                callback( marked(content) );
+%#            }
+%#         });
+%#
+%#     });
+%#% end
+
+        
+
 <form method = "POST">
     <input type = "text" name = "title" ></br>
     <input type = "text" name = "content" ></br>
