@@ -1,0 +1,15 @@
+% layout 'add_post' ;
+% my $title = $pass->[0];
+% my $content = $pass->[1];
+
+<script type="text/javascript" >
+   $(document).ready(function() {
+      $("#markItUp").markItUp(mySettings);
+   });
+</script>
+
+<form method = "POST">
+    title<input type = "text" name = "title" value = <%= $title %>></br>
+    <textarea id="markItUp" name="content"><%= $content %></textarea>
+    <input type = "submit" value = "Submit">
+</form>

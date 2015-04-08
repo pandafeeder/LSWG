@@ -32,7 +32,7 @@ sub startup {
   $r->get('/')->to('index#welcome');
   $r->get('/admin')->to('admin#admin');
   $r->post('/admin')->to('admin#login');
-  $r->get('/posts/:id',[id=>qr/\d+/])->to('posts#single_page');
+  $r->get('/posts(:id)',[id=>qr/\d+/])->to('posts#single_page');
 
   my $logged_in = $r->under('/')->to('admin#is_logged_in');
   $logged_in->get('/restrict')->to('admin#restrict');
@@ -42,7 +42,11 @@ sub startup {
   $add_post->post('add_post')->to('admin#create');
 
   my $delete_post = $r->under('/')->to('admin#is_logged_in');
-  $delete_post->get('/delete/:id', [id=>qr/\d+/])->to('admin#delete_post');
+  $delete_post->get('/delete(:id)', [id=>qr/\d+/])->to('admin#delete_post');
+
+  my $edit_post = $r->under('/')->to('admin#is_logged_in');
+  $edit_post->get('/edit(:id)', [id=>qr/\d+/])->to('edit#edit_page');
+  $edit_post->post('/edit(:id)', [id=>qr/\d+/])->to('edit#edit_post');
 
   $r->get('/logout')->to('admin#logout');
 }
