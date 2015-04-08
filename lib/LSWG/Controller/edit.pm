@@ -12,8 +12,14 @@ sub edit_page {
 
 sub edit_post {
   my $self = shift;
+  my $posts = $self->db->resultset('Post');
+  my $single = $posts->search({ id => $self->stash('id')})->single;
   my $title = $self->param('title');
   my $content = $self->param('content');
+  $single->title($title);
+  $single->content($content);
+  $single->update;
+  $self->redirect_to('restrict');
 }
 
 1;
