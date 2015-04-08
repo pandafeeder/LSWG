@@ -1,24 +1,13 @@
 % layout 'add_post' ;
 
-Welcome to the add_post page.
-
-
-%#%= javascript begin
-%#    jQuery(document).ready(function($) {
-%#	$('#editor').markdownEditor({
-%#	    preview: true,
-%#            onPreview: function (content, callback) {
-%#                callback( marked(content) );
-%#            }
-%#         });
-%#
-%#     });
-%#% end
-
-        
+<script type="text/javascript" >
+   $(document).ready(function() {
+      $("#markItUp").markItUp(mySettings);
+   });
+</script>
 
 <form method = "POST">
-    <input type = "text" name = "title" ></br>
-    <input type = "text" name = "content" ></br>
-    <input type = "submit" value="add Post">
+    title<input type = "text" name = "title" ></br>
+    <textarea id="markItUp" name="content"></textarea>
+    <input type = "submit" value = "add Post">
 </form>

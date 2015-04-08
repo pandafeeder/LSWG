@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <title><%= title %></title>
   <script src="js/jquery-1.11.2.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/ace.js"></script>
-  <script src="js/bootstrap-markdown-editor.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="markitup/jquery.markitup.js"></script>
+  <script src="markitup/sets/default/set.js"></script>
+  <link rel="stylesheet" href="markitup/sets/default/style.css">
+  <link rel="stylesheet" href="markitup/skins/markitup/style.css">
   <style>
 	body { background-color : }
 	form { text-align : }
