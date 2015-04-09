@@ -1,13 +1,10 @@
 % layout 'add_post' ;
 
-<script type="text/javascript" >
-   $(document).ready(function() {
-      $("#markItUp").markItUp(mySettings);
-   });
-</script>
-
 <form method = "POST">
-    title<input type = "text" name = "title" ></br>
-    <textarea id="markItUp" name="content"></textarea>
-    <input type = "submit" value = "add Post">
+    <input name="title" type="text" placeholder="Title?" />
+    <textarea data-provide="markdown" rows="20" name="content"></textarea>
+    <label class="checkbox">
+    </label>
+    <hr/>
+    <button type="submit" class="btn">Submit</button>
 </form>
