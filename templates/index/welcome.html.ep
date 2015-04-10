@@ -4,11 +4,13 @@
 % use Text::Markdown;
 % my $m = Text::Markdown->new;
 
+<div class="container">
 <header>
 Coal Alley 
 </header>
+</div>
 
-<div id = "content">
+<div class="container">
 % if (0 == $posts->count) {
 	<p>None: </p>
 % }
