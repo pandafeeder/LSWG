@@ -1,10 +1,11 @@
 % layout 'welcome';
 % title 'single';
-
-SINGLE
+% use Text::Markdown;
+% my $m = Text::Markdown->new;
 
 % my $title = $pass->[0];
 % my $content = $pass->[1];
+% $content = $m->markdown($content);
 
-<h2><%= $title %><h2>
-<p2><%= $content %></p2>
+<h><%== $title %><h>
+<p><%== $content %></p>
