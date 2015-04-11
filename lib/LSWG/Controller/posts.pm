@@ -8,7 +8,7 @@ sub single_page {
   my $posts = $self->db->resultset('Post');
   my $single = $posts->search({ id => $self->stash('id')})->single;
   my $pass = [($single->title, $single->content)];
-  $self->render( pass => $pass);
+  $self->stash( pass => $pass, title => $single->title);
 }
 
 1;

@@ -1,11 +1,17 @@
-% layout 'welcome';
-% title 'single';
 % use Text::Markdown;
-% my $m = Text::Markdown->new;
+% layout 'welcome';
 
+% my $m = Text::Markdown->new;
 % my $title = $pass->[0];
 % my $content = $pass->[1];
 % $content = $m->markdown($content);
 
+<div class="container">
+<header>
+Coal Alley 
+</header>
+</div>
+<div class="container">
 <h><%== $title %><h>
 <p><%== $content %></p>
+</div>
