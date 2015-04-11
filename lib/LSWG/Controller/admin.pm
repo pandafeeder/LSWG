@@ -55,7 +55,7 @@ sub create {
 		title => $title,
 		content => $content,
 		author => 'UserName',
-		date_published => DateTime->now->iso8601,
+		date_published => DateTime->now,
   });
   $self->flash(post_saved => 1);
   $self->redirect_to('restrict');

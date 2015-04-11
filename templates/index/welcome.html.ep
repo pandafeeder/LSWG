@@ -1,9 +1,9 @@
 % layout 'welcome';
-% title 'LSWG';
-% my $posts = db->resultset('Post');
+% title 'Coal Alley';
 % use Text::Markdown;
 % my $m = Text::Markdown->new;
-
+% my $posts = $posts;
+% my $all = $all;
 <div class="container">
 <header>
 Coal Alley 
@@ -14,10 +14,11 @@ Coal Alley
 % if (0 == $posts->count) {
 	<p>None: </p>
 % }
-% while (my $post = $posts->next) {
-%	my $content = $m->markdown($post->content);
-	<a href="/posts<%= $post->id %>"><h2><%= $post->title %></h2></a>
-	<p><%== $content %></p>
-	%== $post->date_published
+
+% for my $single (reverse (0..$#$all)) {
+%	my $content = $m->markdown($all->[$single]->content);
+        <a href="/posts<%= $all->[$single]->id %>"><h2><%== $all->[$single]->title%></h2></a>
+        <p><%== $content %></p>
+        <p><%== $all->[$single]->date_published%></p>
 % }
 </div>
