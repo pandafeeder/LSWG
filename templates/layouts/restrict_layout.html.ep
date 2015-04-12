@@ -10,6 +10,12 @@
 
   <title><%= title %></title>
   <style>
+	header {
+	    text-align:center;
+	    font-size:30px;
+	    background-color:lightgrey;
+	    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+	  }
 	body { background-color : }
 	form { text-align : }
   </style>

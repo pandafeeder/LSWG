@@ -3,6 +3,7 @@
   <head>
   <meta charset="UTF-8">
   <title><%= title %></title>
+  <link ref="stylesheet" href="css/bootstrap.min.css">
   <style>
 	body { background-color : gray }
 	form { text-align : center }
