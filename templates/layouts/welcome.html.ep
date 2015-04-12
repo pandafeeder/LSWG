@@ -9,14 +9,20 @@
   <!-- STYLE !-->
   <style>
 	header {
+	    color:#FBF8EF;
+	    line-height:100px;
 	    text-align:center;
 	    font-size:30px;
-	    background-color:lightgrey;
+	    background-color:#3B0B0B;
+	    height:100px;
 	    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
 	}
 	#content {
 	    text-align:left;
 	    margin-left:20%;
+	}
+	#single {
+	    font-size: 2em;
 	}
   </style>
     <title><%= title %></title>

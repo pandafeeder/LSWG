@@ -4,13 +4,12 @@
 % if (flash->{post_saved}) {
     <p>Your post is saved</p>
 % }
-<div class="container">
+
 <header>
 Coal Alley --- management page
 </header>
-</div>
 
-<div class="container">
+<div id="content" class="container">
 % while (my $post = $posts->next) {
     <h2><%= $post->title %></h2>
     <p2><%= $post->date_published %></p2>

@@ -6,12 +6,13 @@
 % my $content = $pass->[1];
 % $content = $m->markdown($content);
 
-<div class="container">
 <header>
 Coal Alley 
 </header>
+
+<div id="content" class="container">
+<h id="single"><%== $title %><h>
 </div>
-<div class="container">
-<h><%== $title %><h>
+<div id="content" class="container">
 <p><%== $content %></p>
 </div>
