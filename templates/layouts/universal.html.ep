@@ -15,12 +15,12 @@
 	    font-size:30px;
 	    background-color:#3B0B0B;
 	    height:100px;
-	    font-family: "Times New Roman", Georgia, Serif;
+	    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
 	}
 	#content {
 	    text-align:left;
 	    max-width: 670px;
-	    font-family: "Times New Roman", Georgia, Serif;
+	    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
 	}
 	#single {
 	    font-size: 2em;
