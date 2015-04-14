@@ -16,7 +16,7 @@ Coal Alley
 
 % for my $single (reverse (0..$#$all)) {
 %	my $content = $m->markdown($all->[$single]->content);
-        <a href="/posts<%= $all->[$single]->id %>"><h2><%== $all->[$single]->title%></h2></a>
+        <a href="/posts<%= $all->[$single]->id %>"><h2><font color="#8A0808"><%== $all->[$single]->title%></font></h2></a>
         <p><%== $content %></p>
         <p><%== $all->[$single]->date_published%></p>
 % }
