@@ -1,8 +1,15 @@
 % layout 'admin_layout' ;
-<div class="container">
+
+<div id="form_wrapper" class="container">
 <form method = "POST">
     <input type = "text" name = "UserName" placeholder = "UserName">
     <input type = "password" name = "PassWord" placeholder = "PassWord">
-    <input type = "submit" value = "GO">
+    <input type = "submit" value = "GO"></br></br>
+% if (my $authorize = flash 'authorize') {
+    <h id="mess"><%= $authorize %></h>
+% }
+% if (my $login_need = flash 'login_need') {
+    <h id="mess"><%= $login_need %></h>
+% }
 </form>
 </div>

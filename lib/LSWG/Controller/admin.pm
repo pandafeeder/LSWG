@@ -21,14 +21,16 @@ sub login{
 	$self->session(username => $user);
 	$self->redirect_to('restrict');
   } else {
-	$self->render(text => "Wrong");
+	$self->flash(authorize => "Wrong Name or password");
+	$self->redirect_to('admin');
   }
 }
 
 sub is_logged_in {
   my $self = shift;
   return 1 if $self->session('logged_in');
-  $self->render(text => "Please login first"); 
+  $self->flash(login_need => "Please login first"); 
+  $self->redirect_to('admin');
   return undef;
 }
 
