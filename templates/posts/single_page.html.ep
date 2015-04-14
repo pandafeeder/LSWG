@@ -1,5 +1,5 @@
 % use Text::Markdown;
-% layout 'welcome';
+% layout 'universal';
 
 % my $m = Text::Markdown->new;
 % my $title = $pass->[0];

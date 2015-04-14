@@ -19,9 +19,12 @@
 	}
 	#content {
 	    text-align:left;
-	    margin-left:20%;
+	    max-width: 670px;
 	}
 	#single {
+	    font-size: 2em;
+	}
+	#add_post {
 	    font-size: 2em;
 	}
   </style>

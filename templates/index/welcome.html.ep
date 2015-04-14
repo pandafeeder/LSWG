@@ -1,4 +1,4 @@
-% layout 'welcome';
+% layout 'universal';
 % title 'Coal Alley';
 % use Text::Markdown;
 % my $m = Text::Markdown->new;

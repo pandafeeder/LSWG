@@ -1,4 +1,4 @@
-% layout 'welcome' ;
+% layout 'universal' ;
 % my $posts = db->resultset('Post');
 
 % if (flash->{post_saved}) {
@@ -6,16 +6,18 @@
 % }
 
 <header>
-Coal Alley --- management page
+Coal Alley - management page
 </header>
 
 <div id="content" class="container">
-% while (my $post = $posts->next) {
+<a id="add_post" href="/add_post">Add Post</a>
+% my @all_posts = $posts->all;
+% for my $post (reverse @all_posts) {
     <h2><%= $post->title %></h2>
-    <p2><%= $post->date_published %></p2>
+    <p2><%= $post->date_published %></p2></br>
+    <p2><%== $post->title %></p2></br>
     <a href="/edit<%= $post->id %>">edit</a>
     <a href="/delete<%= $post->id %>">delete</a>
 % }
 </br>
-<a href="/add_post">add</a>
 </div>

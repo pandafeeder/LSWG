@@ -4,8 +4,8 @@ use DateTime;
 use utf8;
 
 my %USER = (
-    user => 'qusr',
-    pass => '1111'
+    user => 'admin',
+    pass => '000000'
 );
 
 sub admin{
