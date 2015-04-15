@@ -11,8 +11,14 @@ Coal Alley
 </header>
 
 <div id="content" class="container">
-<h id="single"><%== $title %><h>
-</div>
-<div id="content" class="container">
+</br><h id="single"><%= $title %></h>
 <p><%== $content %></p>
+</div>
+
+<div id="foot" class="container">
+</br>
+<p>TELLUWAHTLIFESUCKSITSUCKIREALLYMEANITDANMMEANITOHYEAHLIFESUCKSSUCKITUP
+SSULISCUKKLIFESUCKSLLSCEIFLS
+<font color="#8A0808">pandafeeder@gmail.com</font>
+SLSFUKCCILEFISUKKSILIFSSSUCL</p>
 </div>

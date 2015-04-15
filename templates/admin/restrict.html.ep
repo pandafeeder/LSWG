@@ -1,5 +1,6 @@
 % layout 'universal' ;
 % my $posts = db->resultset('Post');
+% my $pass = $pass ;
 
 % if (flash->{post_saved}) {
     <p>Your post is saved</p>
@@ -8,6 +9,12 @@
 <header>
 Coal Alley - management page
 </header>
+
+% if (my $pass == 000000) {
+<div id="changepass" class="container">
+    <h3><a href="/changepass"><font color="red">You are using the default password, please click me to change it first!</font></a></h3>
+</div>
+% }
 
 <div id="content" class="container">
 <a id="add_post" href="/add_post">Add Post</a>
@@ -20,4 +27,12 @@ Coal Alley - management page
     <a href="/delete<%= $post->id %>">delete</a>
 % }
 </br>
+</div>
+
+<div id="foot" class="container">
+</br>
+<p>TELLUWAHTLIFESUCKSITSUCKIREALLYMEANITDANMMEANITOHYEAHLIFESUCKSSUCKITUP
+SSULISCUKKLIFESUCKSLLSCEIFLS
+<font color="#8A0808">pandafeeder@gmail.com</font>
+SLSFUKCCILEFISUKKSILIFSSSUCL</p>
 </div>

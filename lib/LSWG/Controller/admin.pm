@@ -36,6 +36,7 @@ sub is_logged_in {
 
 sub restrict {
   my $self = shift;
+  $self->stash(pass => $USER{pass});
 }
 
 sub add_post {
