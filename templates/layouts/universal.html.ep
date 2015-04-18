@@ -27,7 +27,7 @@
 	    font-size: 2em;
 	}
 	#add_post {
-	    font-size: 2em;
+	    font-size: 1.5em;
 	}
 	#foot{
 	    text-align:center;

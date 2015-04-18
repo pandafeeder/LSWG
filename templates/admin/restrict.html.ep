@@ -17,8 +17,14 @@ Coal Alley - management page
 % }
 
 <div id="content" class="container">
-<a id="add_post" href="/add_post">Add Post</a></br>
-<a id="add_post" href="/logout">Logout</a>
+<table style="width:100%">
+<tr align="center">
+<td><a id="add_post" href="/add_post">Add Post</a></td>
+<td><a id="add_post" href="/changepass">Change Password</a></td>
+<td><a id="add_post" href="/logout">LogOut</a></td>
+</tr>
+</table>
+
 % my @all_posts = $posts->all;
 % for my $post (reverse @all_posts) {
     <h2><%= $post->title %></h2>
