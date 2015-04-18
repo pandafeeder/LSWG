@@ -3,13 +3,13 @@ use Mojo::Base 'Mojolicious';
 use LSWG::Model::Schema;
 use DateTime;
 use utf8;
-use Mojolicious::Plugin::Bcrypt;
+#use Mojolicious::Plugin::Bcrypt;
 
 # This method will run once at server start
 sub startup {
   my $self = shift;
 #use bcrypt to encrypt password
-  $self->plugin('bcrypt');
+#$self->plugin('bcrypt');
  
 #connect to post and pass database
   my $schema = LSWG::Model::Schema->connect('dbi:SQLite:database/post.db','', '', {sqlite_unicode => 1});
