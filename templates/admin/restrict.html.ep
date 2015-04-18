@@ -1,6 +1,6 @@
 % layout 'universal' ;
 % my $posts = db->resultset('Post');
-% my $pass = $pass ;
+% my @checkchanged = passdb->resultset('Pass')->all;
 
 % if (flash->{post_saved}) {
     <p>Your post is saved</p>
@@ -10,14 +10,15 @@
 Coal Alley - management page
 </header>
 
-% if (my $pass == 000000) {
+% if ($checkchanged[0]->password eq '000000') {
 <div id="changepass" class="container">
     <h3><a href="/changepass"><font color="red">You are using the default password, please click me to change it first!</font></a></h3>
 </div>
 % }
 
 <div id="content" class="container">
-<a id="add_post" href="/add_post">Add Post</a>
+<a id="add_post" href="/add_post">Add Post</a></br>
+<a id="add_post" href="/logout">Logout</a>
 % my @all_posts = $posts->all;
 % for my $post (reverse @all_posts) {
     <h2><%= $post->title %></h2>

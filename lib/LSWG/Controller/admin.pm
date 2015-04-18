@@ -1,12 +1,8 @@
 package LSWG::Controller::Admin;
 use Mojo::Base 'Mojolicious::Controller';
 use DateTime;
+#use LSWG::Model::Authorized;
 use utf8;
-
-my %USER = (
-    user => 'admin',
-    pass => '000000'
-);
 
 sub admin{
   my $self = shift;
@@ -16,7 +12,10 @@ sub login{
   my $self = shift;
   my $user = $self->param("UserName");
   my $pass = $self->param("PassWord");
-  if ($user eq $USER{user} && $pass eq $USER{pass}) {
+  my @table = $self->passdb->resultset('Pass')->all;
+  my $userInDb = $table[0]->username;
+  my $passInDb = $table[0]->password;
+  if ($user eq $userInDb && $pass eq $passInDb) {
 	$self->session(logged_in => 1);
 	$self->session(username => $user);
 	$self->redirect_to('restrict');
@@ -36,11 +35,23 @@ sub is_logged_in {
 
 sub restrict {
   my $self = shift;
-  $self->stash(pass => $USER{pass});
 }
 
 sub add_post {
   my $self = shift;
+}
+
+sub changepage {
+  my $self = shift;
+}
+
+sub changepass {
+  my $self = shift;
+  my $passwd = $self->param('newPassWord');
+  my @table  = $self->passdb->resultset('Pass')->all;
+  $table[0]->password($passwd);
+  $table[0]->update;
+  $self->redirect_to('restrict');
 }
 
 sub delete_post {
