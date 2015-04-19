@@ -24,7 +24,7 @@
 	    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
 	}
 	#single {
-	    font-size: 2em;
+	    font-size: 1.5em;
 	}
 	#add_post {
 	    font-size: 1.5em;

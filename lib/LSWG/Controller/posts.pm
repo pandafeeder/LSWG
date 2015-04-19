@@ -7,8 +7,8 @@ sub single_page {
   
   my $posts = $self->db->resultset('Post');
   my $single = $posts->search({ id => $self->stash('id')})->single;
-  my $pass = [($single->title, $single->content)];
-  $self->stash( pass => $pass, title => $single->title);
+  my $pass = [($single->title, $single->content, $single->date_published->set_time_zone('local')->strftime('%Y-%m-%d %H:%M:%S'))];
+  $self->stash( pass => $pass );
 }
 
 1;

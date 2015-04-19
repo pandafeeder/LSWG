@@ -4,6 +4,7 @@
 % my $m = Text::Markdown->new;
 % my $title = $pass->[0];
 % my $content = $pass->[1];
+% my $date = $pass->[2];
 % $content = $m->markdown($content);
 
 <header>
@@ -11,8 +12,9 @@ Coal Alley
 </header>
 
 <div id="content" class="container">
-</br><h id="single"><%= $title %></h>
+<h3><font size="4"><%= $title %></font></h3>
 <p><%== $content %></p>
+<p><%== $date %></p>
 </div>
 
 <div id="foot" class="container">
