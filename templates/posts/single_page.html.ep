@@ -3,6 +3,7 @@
 
 % my $m = Text::Markdown->new;
 % my $title = $pass->[0];
+% title $title;
 % my $content = $pass->[1];
 % my $date = $pass->[2];
 % $content = $m->markdown($content);
