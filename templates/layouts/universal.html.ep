@@ -2,6 +2,8 @@
 <html>
   <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="js/jquery-1.11.2.min.js"></script>
 
   <!-- Latest compiled and minified CSS -->
@@ -18,10 +20,15 @@
 	    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
 	}
 	#content {
+	    min-height: 610px;
 	    text-align:left;
-	    min-height: 530px;
 	    max-width: 670px;
 	    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+	}
+	#seperate{
+	    background-color:#3B0B0B;
+	    min-height: 10px;
+	    max-width: 670px;
 	}
 	#single {
 	    font-size: 1.5em;

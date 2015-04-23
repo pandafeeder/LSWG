@@ -68,6 +68,12 @@ sub startup {
   $changepass->get('changepass')->to('admin#changepage');
   $changepass->post('changepass')->to('admin#changepass');
   $r->get('/logout')->to('admin#logout');
+
+  $r->any('/*whatever' => {whatever => ''} => sub {
+  my $c = shift;
+  my $whatever = $c->param('whatever');
+  $c->render(text => "the page you request not found", status => 404);
+  });
 }
 
 1;

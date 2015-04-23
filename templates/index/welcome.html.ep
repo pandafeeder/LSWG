@@ -9,23 +9,21 @@
 Coal Alley 
 </header>
 
-<div id="content" class="container">
+<div id="content" class="container fill">
 % if (0 == $posts->count) {
 	<p>None: </p>
 % }
 
 % for my $single (reverse (0..$#$all)) {
 %	my $content = $m->markdown($all->[$single]->content);
-        <a href="/posts<%= $all->[$single]->id %>"><h2><font color="#8A0808" size="4"><%== $all->[$single]->title%></font></h2></a>
+        <a href="/posts<%= $all->[$single]->id %>"><h2><font color="#8A0808" size="5"><%== $all->[$single]->title%></font></h2></a>
         <p><%== $content %></p>
         <p><%== $all->[$single]->date_published->set_time_zone('local')->strftime('%Y-%m-%d %H:%M:%S') %></p>
+	</br></br>
 % }
 </div>
 
 <div id="foot" class="container">
 </br>
-<p>TELLUWAHTLIFESUCKSITSUCKIREALLYMEANITDANMMEANITOHYEAHLIFESUCKSSUCKITUP
-SSULISCUKKLIFESUCKSLLSCEIFLS
-<font color="#8A0808">pandafeeder@gmail.com</font>
-SLSFUKCCILEFISUKKSILIFSSSUCL</p>
+<p>LIFESUCKSSUCKS<font color="#8A0808">pandafeeder@gmail.com</font>SKCUSSKCUSEFIL</p>
 </div>
