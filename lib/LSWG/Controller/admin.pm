@@ -45,6 +45,10 @@ sub changepage {
   my $self = shift;
 }
 
+sub save_page {
+  my $self = shift;
+}
+
 sub changepass {
   my $self = shift;
   my $passwd = $self->param('newPassWord');
@@ -56,22 +60,40 @@ sub changepass {
 
 sub delete_post {
   my $self = shift;
-  my $posts = $self->db->resultset('Post');
+  my $url = $self->url_for;
+  my $posts;
+  if ($url =~ /postdelete/) {
+    $posts = $self->db->resultset('Post');
+  } elsif ($url =~ /savedelete/) {
+    $posts = $self->savedb->resultset('Save');
+  } else {
+    $self->render(text => "wrong path");
+  }
   $posts->search({ id => $self->stash('id')})->delete;
   $self->redirect_to('restrict');
 }
 
-sub create {
+
+sub create_or_save {
   my $self = shift;
   my $title = $self->param('title');
   my $content = $self->param('content');
-  $self->db->resultset('Post')->create({
-		title => $title,
-		content => $content,
-		author => 'UserName',
-		date_published => DateTime->now,
-  });
-  $self->flash(post_saved => 1);
+  my $button = $self->param('p_button') | $self->param('s_button');
+  if ($button eq "Publish") {
+	$self->db->resultset('Post')->create({
+	    title => $title,
+	    content => $content,
+	    author => 'UserName',
+	    date_published => DateTime->now,
+	});
+    } elsif ($button eq "Save") {
+	$self->savedb->resultset('Save')->create({
+	    title => $title,
+	    content => $content,
+	    author => 'UserName',
+	    date_saved => DateTime->now,
+	});
+    }    
   $self->redirect_to('restrict');
 }
 

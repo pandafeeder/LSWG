@@ -1,11 +1,9 @@
 % layout 'universal' ;
 % title 'ManagementPage';
 % my $posts = db->resultset('Post');
+% my $saves = savedb->resultset('Save');
 % my @checkchanged = passdb->resultset('Pass')->all;
 
-% if (flash->{post_saved}) {
-    <p>Your post is saved</p>
-% }
 
 <header>
 Coal Alley - management page
@@ -27,16 +25,39 @@ Coal Alley - management page
 </table>
 </br>
 
+<h2>Posts</h2>
 % my @all_posts = $posts->all;
+% if (@all_posts) {
 % for my $post (reverse @all_posts) {
     <table style="width:100%">
     <tr>
     <td width="40%"><a href="/posts<%= $post->id %>"><font color="#8A0808"><%== $post->title%></font></a></td>
     <td width="50%", align="left"><%= $post->date_published->set_time_zone('local')->strftime('%Y-%m-%d %H:%M:%S') %></td>
-    <td width="5%", align="left"><a href="/edit<%= $post->id %>">edit</a></td>
-    <td width="5%", align="right"><a href="/delete<%= $post->id %>">delete</a></td>
+    <td width="5%", align="left"><a href="/postedit<%= $post->id %>">edit</a></td>
+    <td width="5%", align="right"><a href="/postdelete<%= $post->id %>">delete</a></td>
     </tr>
     </table>
+% }
+% } else {
+    <p>None Posts</p>
+% }
+</br>
+
+<h2>Saved posts but not published</h2>
+% my @all_saves = $saves->all;
+% if (@all_saves) {
+% for my $save (reverse @all_saves) {
+    <table style="width:100%">
+    <tr>
+    <td width="40%"><a href="/save<%= $save->id %>"><font color="#8A0808"><%== $save->title%></font></a></td>
+    <td width="50%", align="left"><%= $save->date_saved->set_time_zone('local')->strftime('%Y-%m-%d %H:%M:%S') %></td>
+    <td width="5%", align="left"><a href="/saveedit<%= $save->id %>">edit</a></td>
+    <td width="5%", align="right"><a href="/savedelete<%= $save->id %>">delete</a></td>
+    </tr>
+    </table>
+% }
+% } else {
+    <p>None Save posts</p>
 % }
 </br>
 </div>

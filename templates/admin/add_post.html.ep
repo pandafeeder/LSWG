@@ -1,10 +1,11 @@
 % layout 'add_post' ;
 
 <form method = "POST">
-    <input name="title" type="text" placeholder="Title?" />
+    <input name="title" type="text" placeholder="Title" />
     <textarea data-provide="markdown" rows="20" name="content"></textarea>
     <label class="checkbox">
     </label>
     <hr/>
-    <button type="submit" class="btn">Submit</button>
+    <input value="Publish" name="p_button" type="submit" class="btn"></input>
+    <input value="Save"    name="s_button" type="submit" class="btn"></input>
 </form>

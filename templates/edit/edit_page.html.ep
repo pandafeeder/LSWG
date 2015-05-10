@@ -5,5 +5,6 @@
 <form method = "POST">
     title<input type = "text" name = "title" value = <%= $title %>></br>
     <textarea data-provide="markdown" rows="20" name="content"><%= $content %></textarea>
-    <input type = "submit" value = "Submit">
+    <input type = "submit" value = "Publish">
+    <input type = "submit" value = "Save">
 </form>

@@ -14,6 +14,7 @@ sub startup {
 #connect to post and pass database
   my $schema = LSWG::Model::Schema->connect('dbi:SQLite:database/post.db','', '', {sqlite_unicode => 1});
   my $pass_db = LSWG::Model::Schema->connect('dbi:SQLite:database/pass.db');
+  my $save_db = LSWG::Model::Schema->connect('dbi:SQLite:database/save.db','', '', {sqlite_unicode => 1});
 
 #check existence of post and pass db, deploy if not existed 
   if (-e 'database/post.db') {
@@ -32,10 +33,17 @@ sub startup {
 		password => '000000',
 	  });
   }
+  
+   if (-e 'database/save.db') {
+	   print "save database exist\n";
+   } else {
+	   $save_db->deploy();
+   }
 
 #create helper db for post.db, passdb for pass.db
   $self->helper(db => sub {return $schema});
   $self->helper(passdb => sub {return $pass_db});
+  $self->helper(savedb => sub {return $save_db});
 
   $self->secrets(['Mojolicious rock']);
   $self->app->sessions->cookie_name('LSWG');
@@ -55,14 +63,20 @@ sub startup {
 
   my $add_post = $r->under('/')->to('admin#is_logged_in');
   $add_post->get('add_post')->to('admin#add_post');
-  $add_post->post('add_post')->to('admin#create');
+  $add_post->post('add_post')->to('admin#create_or_save');
 
   my $delete_post = $r->under('/')->to('admin#is_logged_in');
-  $delete_post->get('/delete(:id)', [id=>qr/\d+/])->to('admin#delete_post');
+  $delete_post->get('/postdelete(:id)', [id=>qr/\d+/])->to('admin#delete_post');
 
   my $edit_post = $r->under('/')->to('admin#is_logged_in');
-  $edit_post->get('/edit(:id)', [id=>qr/\d+/])->to('edit#edit_page');
-  $edit_post->post('/edit(:id)', [id=>qr/\d+/])->to('edit#edit_post');
+  $edit_post->get('/postedit(:id)', [id=>qr/\d+/])->to('edit#edit_page');
+  $edit_post->post('/postedit(:id)', [id=>qr/\d+/])->to('edit#edit_post');
+
+  my $save_post = $r->under('/')->to('admin#is_logged_in');
+  $save_post->get('/save(:id)', [id=>qr/\d+/])->to('posts#single_save');
+  $save_post->get('/saveedit(:id)', [id=>qr/\d+/])->to('edit#edit_page');
+  $save_post->post('/saveedit(:id)', [id=>qr/\d+/])->to('edit#edit_post');
+  $save_post->get('/savedelete(:id)', [id=>qr/\d+/])->to('admin#delete_post');
 
   my $changepass = $r->under('/')->to('admin#is_logged_in');
   $changepass->get('changepass')->to('admin#changepage');
