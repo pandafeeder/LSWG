@@ -73,7 +73,7 @@ sub startup {
   $edit_post->post('/postedit(:id)', [id=>qr/\d+/])->to('edit#edit_post');
 
   my $save_post = $r->under('/')->to('admin#is_logged_in');
-  $save_post->get('/save(:id)', [id=>qr/\d+/])->to('posts#single_save');
+  $save_post->get('/save(:id)', [id=>qr/\d+/])->to('posts#single_page');
   $save_post->get('/saveedit(:id)', [id=>qr/\d+/])->to('edit#edit_page');
   $save_post->post('/saveedit(:id)', [id=>qr/\d+/])->to('edit#edit_post');
   $save_post->get('/savedelete(:id)', [id=>qr/\d+/])->to('admin#delete_post');
