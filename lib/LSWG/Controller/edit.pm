@@ -22,7 +22,7 @@ sub edit_page {
 sub edit_post {
   my $self = shift;
   my $url = $self->url_for;
-  my $button = $self->param('p_button')|$self->param('s_button');
+  my $button = $self->param('p_button') || $self->param('s_button');
   if ($button eq 'Publish' && $url =~ /post/ ) {
     my $posts = $self->db->resultset('Post');
     $self->update($posts);

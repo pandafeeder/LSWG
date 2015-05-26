@@ -78,7 +78,7 @@ sub create_or_save {
   my $self = shift;
   my $title = $self->param('title');
   my $content = $self->param('content');
-  my $button = $self->param('p_button') | $self->param('s_button');
+  my $button = $self->param('p_button') || $self->param('s_button');
   if ($button eq "Publish") {
 	$self->db->resultset('Post')->create({
 	    title => $title,
