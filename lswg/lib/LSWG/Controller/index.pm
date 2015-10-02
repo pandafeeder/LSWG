@@ -1,12 +1,14 @@
 package LSWG::Controller::Index;
+use utf8;
 use Mojo::Base 'Mojolicious::Controller';
 
 # This action will render a template
 sub welcome {
   my $self = shift;
+  my $posts = $self->db->resultset('Post');
+  my @all = $posts->all;
 
-  # Render template "example/welcome.html.ep" with message
-  $self->render(title => 'post1', content => "This is content of post1");
+  $self->stash(posts => $posts, all => \@all);
 }
 
 1;

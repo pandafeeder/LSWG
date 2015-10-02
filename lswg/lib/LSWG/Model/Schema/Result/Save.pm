@@ -1,9 +1,9 @@
-package LSWG::Model::Schema::Result::Post;
+package LSWG::Model::Schema::Result::Save;
 use base qw/DBIx::Class::Core/;
 use utf8;
 
 __PACKAGE__->load_components(qw/InflateColumn::DateTime/);
-__PACKAGE__->table('posts');
+__PACKAGE__->table('Save');
 
 __PACKAGE__->add_columns(
     
@@ -20,7 +20,7 @@ __PACKAGE__->add_columns(
     content => {
 	data_type => 'text',
     },
-    date_published => {
+    date_saved => {
 	data_type => 'datetime',
     },
 );
