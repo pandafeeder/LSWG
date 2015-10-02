@@ -7,22 +7,7 @@
 
 <header>
 Coal Alley 
-There'll be one day no pandafeeder but panda>
 </header>
-
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Index
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-  %for (reverse (0..$#$all)) {
-    <li><a href="/posts<%= $all->[$_]->id %>"><font color="#8A0808" size="2"><%== $all->[$_]->title%></font></a></li>
-  %} 
-  </ul>
-</div>
-
-
 
 <div id="content" class="container fill">
 % if (0 == $posts->count) {
