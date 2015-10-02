@@ -1,8 +1,0 @@
-% layout 'admin_layout' ;
-
-<div id="form_wrapper" class="container">
-<form method = "POST">
-    <input type = "password" name = "newPassWord" placeholder = "NewPassWord">
-    <input type = "submit" value = "Submit"></br></br>
-</form>
-</div>
