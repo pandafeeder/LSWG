@@ -1,0 +1,69 @@
+% layout 'universal' ;
+% title 'ManagementPage';
+% my $posts = db->resultset('Post');
+% my $saves = savedb->resultset('Save');
+% my @checkchanged = passdb->resultset('Pass')->all;
+
+
+<header>
+Coal Alley - management page
+</header>
+
+% if ($checkchanged[0]->password eq '000000') {
+<div id="changepass" class="container">
+    <h3><a href="/changepass"><font color="red">You are using the default password, please click me to change it first!</font></a></h3>
+</div>
+% }
+
+<div id="content" class="container">
+<table style="width:100%">
+<tr>
+<td align="left"><a id="add_post" href="/add_post">Add Post</a></td>
+<td align="center"><a id="add_post" href="/changepass">Change Password</a></td>
+<td align="right"><a id="add_post" href="/logout">LogOut</a></td>
+</tr>
+</table>
+</br>
+
+<h2>Posts</h2>
+% my @all_posts = $posts->all;
+% if (@all_posts) {
+% for my $post (reverse @all_posts) {
+    <table style="width:100%">
+    <tr>
+    <td width="40%"><a href="/posts<%= $post->id %>"><font color="#8A0808"><%== $post->title%></font></a></td>
+    <td width="50%", align="left"><%= $post->date_published->set_time_zone('Asia/Shanghai')->strftime('%Y-%m-%d %H:%M:%S') %></td>
+    <td width="5%", align="left"><a href="/postedit<%= $post->id %>">edit</a></td>
+    <td width="5%", align="right"><a href="/postdelete<%= $post->id %>">delete</a></td>
+    </tr>
+    </table>
+% }
+% } else {
+    <p>None Posts</p>
+% }
+</br>
+
+<h2>Saved posts but not published</h2>
+% my @all_saves = $saves->all;
+% if (@all_saves) {
+% for my $save (reverse @all_saves) {
+    <table style="width:100%">
+    <tr>
+    <td width="40%"><a href="/save<%= $save->id %>"><font color="#8A0808"><%== $save->title%></font></a></td>
+    <td width="50%", align="left"><%= $save->date_saved->set_time_zone('Asia/Shanghai')->strftime('%Y-%m-%d %H:%M:%S') %></td>
+    <td width="5%", align="left"><a href="/saveedit<%= $save->id %>">edit</a></td>
+    <td width="5%", align="right"><a href="/savedelete<%= $save->id %>">delete</a></td>
+    </tr>
+    </table>
+% }
+% } else {
+    <p>None Save posts</p>
+% }
+</br>
+</div>
+
+
+<div id="foot" class="container">
+</br>
+<p>LIFESUCKSSUCKS<font color="#8A0808">pandafeeder@gmail.com</font>SKCUSSKCUSEFIL</p>
+</div>

@@ -1,0 +1,42 @@
+% layout 'universal';
+% title 'Coal Alley';
+% use Text::Markdown;
+% my $m = Text::Markdown->new;
+% my $posts = $posts;
+% my $all = $all;
+
+<header>
+Coal Alley 
+</header>
+
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Index
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+  %for (reverse (0..$#$all)) {
+    <li><a href="/posts<%= $all->[$_]->id %>"><font color="#8A0808" size="2"><%== $all->[$_]->title%></font></a></li>
+  %}
+  </ul>
+</div>
+
+
+<div id="content" class="container">
+% if (0 == $posts->count) {
+	<p>None: </p>
+% }
+
+% for my $single (reverse (0..$#$all)) {
+%	my $content = $m->markdown($all->[$single]->content);
+        <a href="/posts<%= $all->[$single]->id %>"><h2><font color="#8A0808" size="4"><%== $all->[$single]->title%></font></h2></a>
+        <p><%== $content %></p>
+        <p><%== $all->[$single]->date_published->set_time_zone('Asia/Shanghai')->strftime('%Y-%m-%d %H:%M:%S') %></p>
+	</br></br>
+% }
+</div>
+
+<div id="foot" class="container">
+</br>
+<p>LIFESUCKSSUCKS<font color="#8A0808">pandafeeder@gmail.com</font>SKCUSSKCUSEFIL</p>
+</div>

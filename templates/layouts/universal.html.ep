@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- STYLE !-->
+  <style>
+	header {
+	    color:#FBF8EF;
+	    line-height:100px;
+	    text-align:center;
+	    font-size:30px;
+	    background-color:#3B0B0B;
+	    height:100px;
+	    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+	}
+	#content {
+	    min-height: 610px;
+	    text-align:left;
+	    max-width: 670px;
+	    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+	}
+	#single {
+	    font-size: 1.5em;
+	}
+	#add_post {
+	    font-size: 1.5em;
+	}
+	#foot{
+	    text-align:center;
+	    max-width: 770px;
+	    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+	}
+	#changepass{
+	    text-align:center;
+	    max-width: 770px;
+	    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+	}
+	#left{
+	    font-size: 1em;
+	    float: left;
+            padding-top: 30px;
+            padding-left : 25px;
+            min-height: 610px;
+	    text-align:left;
+	    min-width: 300px;
+	    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+	    line-height: 80%;
+	}
+	.dropdown-menu {
+	    background-color: #F2F2F2;
+	    color:#ffffff;
+	    width: 280px !important;
+	}
+	.dropdown-toggle {
+	    background-color: #2EFE64;
+	    color: #3B0B0B;
+	}
+	.dropdown-menu>li{
+	    padding:0px;
+	    border-bottom:1px solid white;
+	    border-left:1px solid white;
+	    border-right:1px solid white
+	}
+</style>
+    <title><%= title %></title>
+  </head>
+  <body><%= content %></body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link ref="stylesheet" href="css/bootstrap.min.css">
+  <style>
+	body { background-color : #424242}
+	form { text-align : center } 
+	#form_wrapper {
+	    position:absolute;
+	    top:35%;
+	    right:0;
+	    left:0;
+	}
+  </style>
+  </head>
+  <body><%= content %></body>
+</html>

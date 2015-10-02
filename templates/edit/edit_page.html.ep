@@ -1,0 +1,10 @@
+% layout 'add_post' ;
+% my $title = $pass->[0];
+% my $content = $pass->[1];
+
+<form method = "POST">
+    title<input type = "text" name = "title" value = <%= $title %>></br>
+    <textarea data-provide="markdown" rows="20" name="content"><%= $content %></textarea>
+    <input name="p_button" type = "submit" value = "Publish" class="btn"></input>
+    <input name="s_button" type = "submit" value = "Save" class="btn"></input>
+</form>

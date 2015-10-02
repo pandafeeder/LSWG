@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/vendor/to-markdown.js"></script>
+  <script src="js/vendor/markdown.js"></script>
+  <script src="js/vendor/bootstrap-markdown.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-markdown.min.css">
+  <style>
+	body { background-color : }
+	form { text-align : }
+  </style>
+  </head>
+  <body><%= content %></body>
+</html>
