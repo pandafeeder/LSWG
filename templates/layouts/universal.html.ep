@@ -68,6 +68,14 @@
 	    border-left:1px solid white;
 	    border-right:1px solid white
 	}
+	@media screen
+            and (min-width: 1200px) {
+                .child_div_image {
+                        position: relative;
+                        width: 180%;
+                        left: -40%;
+                }
+        }
 </style>
     <title><%= title %></title>
   </head>
